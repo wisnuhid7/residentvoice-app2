@@ -1,0 +1,16 @@
+node_modules
+.git
+.gitignore
+*.log
+.cache
+dist
+logs
+.env
+.DS_Store
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+.replit
+.replitignore
+replit.md
+pnpm-lock.yaml
+.turbo

@@ -1,0 +1,1774 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: ResidentVoice Portal API
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+  - name: auth
+  - name: buildings
+  - name: residents
+  - name: issues
+  - name: solutions
+  - name: resolutions
+  - name: announcements
+  - name: dashboard
+  - name: superadmin
+
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  # ─── Auth ────────────────────────────────────────────────────────────────────
+
+  /auth/me:
+    get:
+      operationId: getMe
+      tags: [auth]
+      summary: Get current user
+      responses:
+        "200":
+          description: Current user
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserWithBuilding"
+        "401":
+          description: Unauthenticated
+
+  /auth/login:
+    post:
+      operationId: login
+      tags: [auth]
+      summary: Login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginInput"
+      responses:
+        "200":
+          description: Logged in
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserWithBuilding"
+        "401":
+          description: Invalid credentials
+
+  /auth/logout:
+    post:
+      operationId: logout
+      tags: [auth]
+      summary: Logout
+      responses:
+        "200":
+          description: Logged out
+
+  /auth/register-building:
+    post:
+      operationId: registerBuilding
+      tags: [auth]
+      summary: Register a new building with admin account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BuildingRegistrationInput"
+      responses:
+        "201":
+          description: Building registered
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserWithBuilding"
+        "400":
+          description: Validation error
+        "409":
+          description: Slug already taken
+
+  /auth/register-resident:
+    post:
+      operationId: registerResident
+      tags: [auth]
+      summary: Register as a resident in a building
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ResidentRegistrationInput"
+      responses:
+        "201":
+          description: Resident registered (pending approval)
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserWithBuilding"
+        "400":
+          description: Validation error
+        "404":
+          description: Building not found
+
+  # ─── Buildings ───────────────────────────────────────────────────────────────
+
+  /buildings/slug/{slug}:
+    get:
+      operationId: getBuildingBySlug
+      tags: [buildings]
+      summary: Get building info by slug (public)
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Building info
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Building"
+        "404":
+          description: Not found
+
+  /buildings/{buildingId}:
+    get:
+      operationId: getBuilding
+      tags: [buildings]
+      summary: Get building details
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Building details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Building"
+    patch:
+      operationId: updateBuilding
+      tags: [buildings]
+      summary: Update building info (admin)
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BuildingUpdate"
+      responses:
+        "200":
+          description: Updated building
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Building"
+
+  /buildings/{buildingId}/settings:
+    get:
+      operationId: getBuildingSettings
+      tags: [buildings]
+      summary: Get building settings
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Building settings
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BuildingSettings"
+    patch:
+      operationId: updateBuildingSettings
+      tags: [buildings]
+      summary: Update building settings (admin)
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BuildingSettingsUpdate"
+      responses:
+        "200":
+          description: Updated settings
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BuildingSettings"
+
+  # ─── Residents ───────────────────────────────────────────────────────────────
+
+  /buildings/{buildingId}/residents:
+    get:
+      operationId: getResidents
+      tags: [residents]
+      summary: List residents (admin/moderator)
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [pending, verified, rejected, suspended]
+      responses:
+        "200":
+          description: Residents list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ResidentUser"
+
+  /buildings/{buildingId}/residents/{userId}/status:
+    patch:
+      operationId: updateResidentStatus
+      tags: [residents]
+      summary: Approve, reject, or suspend a resident (admin)
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ResidentStatusUpdate"
+      responses:
+        "200":
+          description: Updated resident
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResidentUser"
+
+  # ─── Dashboard ───────────────────────────────────────────────────────────────
+
+  /buildings/{buildingId}/dashboard:
+    get:
+      operationId: getDashboard
+      tags: [dashboard]
+      summary: Get building dashboard summary
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Dashboard data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DashboardSummary"
+
+  # ─── Issue Categories ─────────────────────────────────────────────────────────
+
+  /buildings/{buildingId}/categories:
+    get:
+      operationId: getCategories
+      tags: [issues]
+      summary: List issue categories for building
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Categories list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/IssueCategory"
+    post:
+      operationId: createCategory
+      tags: [issues]
+      summary: Create category (admin)
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/IssueCategoryInput"
+      responses:
+        "201":
+          description: Created category
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/IssueCategory"
+
+  # ─── Issues ──────────────────────────────────────────────────────────────────
+
+  /buildings/{buildingId}/issues:
+    get:
+      operationId: getIssues
+      tags: [issues]
+      summary: List issues in a building
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: status
+          in: query
+          schema:
+            type: string
+        - name: urgency
+          in: query
+          schema:
+            type: string
+        - name: categoryId
+          in: query
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          schema:
+            type: string
+            enum: [newest, most_voted, most_commented, urgent]
+      responses:
+        "200":
+          description: Issues list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/IssueSummary"
+    post:
+      operationId: createIssue
+      tags: [issues]
+      summary: Report a new issue
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/IssueInput"
+      responses:
+        "201":
+          description: Created issue
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Issue"
+
+  /buildings/{buildingId}/issues/{issueId}:
+    get:
+      operationId: getIssue
+      tags: [issues]
+      summary: Get issue detail
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Issue detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Issue"
+    patch:
+      operationId: updateIssue
+      tags: [issues]
+      summary: Update issue status or details (admin/moderator)
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/IssueUpdate"
+      responses:
+        "200":
+          description: Updated issue
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Issue"
+
+  /buildings/{buildingId}/issues/{issueId}/vote:
+    post:
+      operationId: voteOnIssue
+      tags: [issues]
+      summary: Vote on an issue (importance) or mark as affected
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/IssueVoteInput"
+      responses:
+        "200":
+          description: Vote recorded
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VoteResult"
+
+  /buildings/{buildingId}/issues/{issueId}/comments:
+    get:
+      operationId: getIssueComments
+      tags: [issues]
+      summary: Get comments for an issue
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Comments list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/IssueComment"
+    post:
+      operationId: addIssueComment
+      tags: [issues]
+      summary: Add a comment to an issue
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/IssueCommentInput"
+      responses:
+        "201":
+          description: Comment added
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/IssueComment"
+
+  /buildings/{buildingId}/issues/{issueId}/status-history:
+    get:
+      operationId: getIssueStatusHistory
+      tags: [issues]
+      summary: Get status change timeline for an issue
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Status history
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/IssueStatusHistory"
+
+  # ─── Solutions ────────────────────────────────────────────────────────────────
+
+  /buildings/{buildingId}/issues/{issueId}/solutions:
+    get:
+      operationId: getSolutions
+      tags: [solutions]
+      summary: List solutions for an issue
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Solutions list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Solution"
+    post:
+      operationId: createSolution
+      tags: [solutions]
+      summary: Suggest a solution
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SolutionInput"
+      responses:
+        "201":
+          description: Solution created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Solution"
+
+  /buildings/{buildingId}/issues/{issueId}/solutions/{solutionId}/vote:
+    post:
+      operationId: voteOnSolution
+      tags: [solutions]
+      summary: Vote for a solution
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: solutionId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Vote recorded
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VoteResult"
+
+  # ─── Resolutions ─────────────────────────────────────────────────────────────
+
+  /buildings/{buildingId}/resolutions:
+    get:
+      operationId: getResolutions
+      tags: [resolutions]
+      summary: List resolutions
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: status
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Resolutions list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Resolution"
+    post:
+      operationId: createResolution
+      tags: [resolutions]
+      summary: Create a resolution
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ResolutionInput"
+      responses:
+        "201":
+          description: Resolution created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Resolution"
+
+  /buildings/{buildingId}/resolutions/{resolutionId}:
+    get:
+      operationId: getResolution
+      tags: [resolutions]
+      summary: Get resolution detail with vote totals
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: resolutionId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Resolution detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResolutionDetail"
+
+  /buildings/{buildingId}/resolutions/{resolutionId}/vote:
+    post:
+      operationId: voteOnResolution
+      tags: [resolutions]
+      summary: Cast a vote on a resolution
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: resolutionId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ResolutionVoteInput"
+      responses:
+        "200":
+          description: Vote cast
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VoteResult"
+
+  /buildings/{buildingId}/resolutions/{resolutionId}/status:
+    patch:
+      operationId: updateResolutionStatus
+      tags: [resolutions]
+      summary: Open or close voting (admin)
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: resolutionId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ResolutionStatusUpdate"
+      responses:
+        "200":
+          description: Updated resolution
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Resolution"
+
+  # ─── Announcements ───────────────────────────────────────────────────────────
+
+  /buildings/{buildingId}/announcements:
+    get:
+      operationId: getAnnouncements
+      tags: [announcements]
+      summary: List announcements
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Announcements list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Announcement"
+    post:
+      operationId: createAnnouncement
+      tags: [announcements]
+      summary: Create an announcement (admin)
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AnnouncementInput"
+      responses:
+        "201":
+          description: Announcement created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Announcement"
+
+  /buildings/{buildingId}/announcements/{announcementId}:
+    delete:
+      operationId: deleteAnnouncement
+      tags: [announcements]
+      summary: Delete an announcement (admin)
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: announcementId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+
+  # ─── Notifications ────────────────────────────────────────────────────────────
+
+  /buildings/{buildingId}/notifications:
+    get:
+      operationId: getNotifications
+      tags: [dashboard]
+      summary: Get notifications for current user
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Notifications list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Notification"
+
+  /buildings/{buildingId}/notifications/read-all:
+    post:
+      operationId: markAllNotificationsRead
+      tags: [dashboard]
+      summary: Mark all notifications as read
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Done
+
+  # ─── Super Admin ─────────────────────────────────────────────────────────────
+
+  /superadmin/buildings:
+    get:
+      operationId: superAdminGetBuildings
+      tags: [superadmin]
+      summary: List all buildings (super admin)
+      responses:
+        "200":
+          description: All buildings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/BuildingAdminView"
+
+  /superadmin/buildings/{buildingId}/status:
+    patch:
+      operationId: superAdminUpdateBuildingStatus
+      tags: [superadmin]
+      summary: Approve or suspend a building
+      parameters:
+        - name: buildingId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BuildingStatusUpdate"
+      responses:
+        "200":
+          description: Updated building
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Building"
+
+  /superadmin/stats:
+    get:
+      operationId: superAdminGetStats
+      tags: [superadmin]
+      summary: Platform-wide statistics
+      responses:
+        "200":
+          description: Platform stats
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PlatformStats"
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required: [status]
+
+    # ─── Auth / Users ─────────────────────────────────────────────────────────
+
+    LoginInput:
+      type: object
+      required: [email, password]
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+
+    BuildingRegistrationInput:
+      type: object
+      required: [buildingName, address, city, country, numberOfUnits, numberOfFloors, buildingType, adminFullName, adminEmail, adminPhone, password, slug]
+      properties:
+        buildingName:
+          type: string
+        slug:
+          type: string
+        address:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        country:
+          type: string
+        numberOfFloors:
+          type: integer
+        numberOfUnits:
+          type: integer
+        buildingType:
+          type: string
+          enum: [high_rise, condo, apartment, gated_community, residential_tower, mixed]
+        adminFullName:
+          type: string
+        adminEmail:
+          type: string
+        adminPhone:
+          type: string
+        password:
+          type: string
+        adminRole:
+          type: string
+
+    ResidentRegistrationInput:
+      type: object
+      required: [buildingSlug, fullName, email, password, apartmentNumber, floor, residentType]
+      properties:
+        buildingSlug:
+          type: string
+        fullName:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        password:
+          type: string
+        apartmentNumber:
+          type: string
+        floor:
+          type: integer
+        residentType:
+          type: string
+          enum: [owner, tenant, family_member, property_manager]
+        inviteCode:
+          type: string
+
+    UserWithBuilding:
+      type: object
+      required: [id, fullName, email, role, verificationStatus]
+      properties:
+        id:
+          type: integer
+        fullName:
+          type: string
+        email:
+          type: string
+        phone:
+          type: ["string", "null"]
+        role:
+          type: string
+          enum: [super_admin, building_admin, moderator, resident_owner, resident_tenant]
+        verificationStatus:
+          type: string
+          enum: [pending, verified, rejected, suspended]
+        apartmentNumber:
+          type: ["string", "null"]
+        floor:
+          type: ["integer", "null"]
+        residentType:
+          type: ["string", "null"]
+        buildingId:
+          type: ["integer", "null"]
+        building:
+          $ref: "#/components/schemas/Building"
+          nullable: true
+
+    ResidentUser:
+      type: object
+      required: [id, fullName, email, role, verificationStatus, createdAt]
+      properties:
+        id:
+          type: integer
+        fullName:
+          type: string
+        email:
+          type: string
+        phone:
+          type: ["string", "null"]
+        role:
+          type: string
+        verificationStatus:
+          type: string
+        apartmentNumber:
+          type: ["string", "null"]
+        floor:
+          type: ["integer", "null"]
+        residentType:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+
+    ResidentStatusUpdate:
+      type: object
+      required: [status]
+      properties:
+        status:
+          type: string
+          enum: [verified, rejected, suspended, pending]
+        reason:
+          type: string
+
+    # ─── Buildings ─────────────────────────────────────────────────────────────
+
+    Building:
+      type: object
+      required: [id, name, slug, city, country, status, plan, createdAt]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        slug:
+          type: string
+        address:
+          type: ["string", "null"]
+        city:
+          type: string
+        state:
+          type: ["string", "null"]
+        country:
+          type: string
+        timezone:
+          type: ["string", "null"]
+        numberOfUnits:
+          type: ["integer", "null"]
+        numberOfFloors:
+          type: ["integer", "null"]
+        buildingType:
+          type: ["string", "null"]
+        logoUrl:
+          type: ["string", "null"]
+        photoUrl:
+          type: ["string", "null"]
+        status:
+          type: string
+          enum: [active, pending, suspended]
+        plan:
+          type: string
+          enum: [free, basic, pro, enterprise]
+        createdAt:
+          type: string
+
+    BuildingUpdate:
+      type: object
+      properties:
+        name:
+          type: string
+        address:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        country:
+          type: string
+        timezone:
+          type: string
+        numberOfUnits:
+          type: integer
+        numberOfFloors:
+          type: integer
+        buildingType:
+          type: string
+        logoUrl:
+          type: string
+        photoUrl:
+          type: string
+
+    BuildingSettings:
+      type: object
+      required: [id, buildingId]
+      properties:
+        id:
+          type: integer
+        buildingId:
+          type: integer
+        verificationMethod:
+          type: string
+          enum: [manual_approval, invite_code, document_upload]
+        allowTenantOfficialVotes:
+          type: boolean
+        oneVotePerUnit:
+          type: boolean
+        passPercentage:
+          type: integer
+        allowAnonymousPosts:
+          type: boolean
+        inviteCode:
+          type: ["string", "null"]
+
+    BuildingSettingsUpdate:
+      type: object
+      properties:
+        verificationMethod:
+          type: string
+        allowTenantOfficialVotes:
+          type: boolean
+        oneVotePerUnit:
+          type: boolean
+        passPercentage:
+          type: integer
+        allowAnonymousPosts:
+          type: boolean
+        inviteCode:
+          type: string
+
+    BuildingStatusUpdate:
+      type: object
+      required: [status]
+      properties:
+        status:
+          type: string
+          enum: [active, pending, suspended]
+
+    BuildingAdminView:
+      type: object
+      required: [id, name, slug, city, country, status, plan, residentCount, issueCount, createdAt]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        slug:
+          type: string
+        city:
+          type: string
+        country:
+          type: string
+        status:
+          type: string
+        plan:
+          type: string
+        residentCount:
+          type: integer
+        issueCount:
+          type: integer
+        createdAt:
+          type: string
+
+    # ─── Dashboard ─────────────────────────────────────────────────────────────
+
+    DashboardSummary:
+      type: object
+      required: [topIssues, recentIssues, openIssueCount, resolvedIssueCount, residentCount, activeResolutionCount, recentAnnouncements]
+      properties:
+        topIssues:
+          type: array
+          items:
+            $ref: "#/components/schemas/IssueSummary"
+        recentIssues:
+          type: array
+          items:
+            $ref: "#/components/schemas/IssueSummary"
+        openIssueCount:
+          type: integer
+        resolvedIssueCount:
+          type: integer
+        residentCount:
+          type: integer
+        activeResolutionCount:
+          type: integer
+        recentAnnouncements:
+          type: array
+          items:
+            $ref: "#/components/schemas/Announcement"
+        issuesByCategory:
+          type: array
+          items:
+            $ref: "#/components/schemas/CategoryCount"
+        issuesByStatus:
+          type: array
+          items:
+            $ref: "#/components/schemas/StatusCount"
+
+    CategoryCount:
+      type: object
+      required: [category, count]
+      properties:
+        category:
+          type: string
+        count:
+          type: integer
+
+    StatusCount:
+      type: object
+      required: [status, count]
+      properties:
+        status:
+          type: string
+        count:
+          type: integer
+
+    # ─── Issue Categories ─────────────────────────────────────────────────────
+
+    IssueCategory:
+      type: object
+      required: [id, buildingId, name, createdAt]
+      properties:
+        id:
+          type: integer
+        buildingId:
+          type: integer
+        name:
+          type: string
+        description:
+          type: ["string", "null"]
+        color:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+
+    IssueCategoryInput:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        color:
+          type: string
+
+    # ─── Issues ───────────────────────────────────────────────────────────────
+
+    IssueSummary:
+      type: object
+      required: [id, buildingId, title, status, urgency, createdAt, voteCount, commentCount, affectedCount]
+      properties:
+        id:
+          type: integer
+        buildingId:
+          type: integer
+        title:
+          type: string
+        urgency:
+          type: string
+          enum: [low, medium, high, emergency]
+        status:
+          type: string
+        categoryName:
+          type: ["string", "null"]
+        categoryColor:
+          type: ["string", "null"]
+        voteCount:
+          type: integer
+        commentCount:
+          type: integer
+        affectedCount:
+          type: integer
+        createdAt:
+          type: string
+        submittedBy:
+          type: ["string", "null"]
+        hasVoted:
+          type: boolean
+        isAffected:
+          type: boolean
+
+    Issue:
+      type: object
+      required: [id, buildingId, title, description, status, urgency, locationType, affectsSafety, affectsMultipleResidents, isRecurring, anonymousPublic, voteCount, commentCount, affectedCount, createdAt]
+      properties:
+        id:
+          type: integer
+        buildingId:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        status:
+          type: string
+          enum: [new, verified, duplicate, sent_to_admin, waiting_response, in_review, in_progress, vendor_scheduled, resolved, rejected, reopened]
+        urgency:
+          type: string
+          enum: [low, medium, high, emergency]
+        locationType:
+          type: string
+        locationText:
+          type: ["string", "null"]
+        categoryId:
+          type: ["integer", "null"]
+        categoryName:
+          type: ["string", "null"]
+        categoryColor:
+          type: ["string", "null"]
+        isRecurring:
+          type: boolean
+        startedAt:
+          type: ["string", "null"]
+        affectsSafety:
+          type: boolean
+        affectsMultipleResidents:
+          type: ["string", "null"]
+        suggestedSolution:
+          type: ["string", "null"]
+        anonymousPublic:
+          type: boolean
+        voteCount:
+          type: integer
+        commentCount:
+          type: integer
+        affectedCount:
+          type: integer
+        hasVoted:
+          type: boolean
+        isAffected:
+          type: boolean
+        submittedBy:
+          type: ["string", "null"]
+        submittedByFloor:
+          type: ["integer", "null"]
+        adminResponse:
+          type: ["string", "null"]
+        estimatedCompletionDate:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    IssueInput:
+      type: object
+      required: [title, description, locationType, urgency, isRecurring, affectsSafety, affectsMultipleResidents, anonymousPublic]
+      properties:
+        title:
+          type: string
+        categoryId:
+          type: integer
+        description:
+          type: string
+        locationType:
+          type: string
+          enum: [lobby, elevator, floor, apartment, garage, roof, pool, gym, hallway, stairs, other]
+        locationText:
+          type: string
+        urgency:
+          type: string
+          enum: [low, medium, high, emergency]
+        isRecurring:
+          type: boolean
+        startedAt:
+          type: string
+        affectsSafety:
+          type: boolean
+        affectsMultipleResidents:
+          type: string
+          enum: [yes, no, not_sure]
+        suggestedSolution:
+          type: string
+        anonymousPublic:
+          type: boolean
+
+    IssueUpdate:
+      type: object
+      properties:
+        status:
+          type: string
+        adminResponse:
+          type: string
+        estimatedCompletionDate:
+          type: string
+        urgency:
+          type: string
+
+    IssueVoteInput:
+      type: object
+      required: [voteType]
+      properties:
+        voteType:
+          type: string
+          enum: [important, affected]
+
+    IssueComment:
+      type: object
+      required: [id, issueId, comment, anonymousPublic, createdAt]
+      properties:
+        id:
+          type: integer
+        issueId:
+          type: integer
+        comment:
+          type: string
+        anonymousPublic:
+          type: boolean
+        authorName:
+          type: ["string", "null"]
+        authorRole:
+          type: ["string", "null"]
+        isAdminResponse:
+          type: boolean
+        createdAt:
+          type: string
+
+    IssueCommentInput:
+      type: object
+      required: [comment]
+      properties:
+        comment:
+          type: string
+        anonymousPublic:
+          type: boolean
+
+    IssueStatusHistory:
+      type: object
+      required: [id, issueId, newStatus, createdAt]
+      properties:
+        id:
+          type: integer
+        issueId:
+          type: integer
+        oldStatus:
+          type: ["string", "null"]
+        newStatus:
+          type: string
+        note:
+          type: ["string", "null"]
+        changedBy:
+          type: ["string", "null"]
+        changedByRole:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+
+    VoteResult:
+      type: object
+      required: [count, hasVoted]
+      properties:
+        count:
+          type: integer
+        hasVoted:
+          type: boolean
+        voteType:
+          type: ["string", "null"]
+
+    # ─── Solutions ────────────────────────────────────────────────────────────
+
+    Solution:
+      type: object
+      required: [id, issueId, title, description, voteCount, hasVoted, createdAt]
+      properties:
+        id:
+          type: integer
+        issueId:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        estimatedCost:
+          type: ["string", "null"]
+        pros:
+          type: ["string", "null"]
+        cons:
+          type: ["string", "null"]
+        voteCount:
+          type: integer
+        hasVoted:
+          type: boolean
+        createdBy:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+
+    SolutionInput:
+      type: object
+      required: [title, description]
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        estimatedCost:
+          type: string
+        pros:
+          type: string
+        cons:
+          type: string
+
+    # ─── Resolutions ─────────────────────────────────────────────────────────
+
+    Resolution:
+      type: object
+      required: [id, buildingId, title, description, proposedAction, votingType, eligibleVoters, status, createdAt]
+      properties:
+        id:
+          type: integer
+        buildingId:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        proposedAction:
+          type: string
+        votingType:
+          type: string
+          enum: [informal, official, petition]
+        eligibleVoters:
+          type: string
+          enum: [owners_only, tenants_only, all_residents, one_per_unit]
+        oneVotePerUnit:
+          type: boolean
+        passPercentage:
+          type: integer
+        status:
+          type: string
+          enum: [draft, open, closed, passed, failed]
+        relatedIssueId:
+          type: ["integer", "null"]
+        votingStartAt:
+          type: ["string", "null"]
+        votingEndAt:
+          type: ["string", "null"]
+        createdBy:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    ResolutionDetail:
+      allOf:
+        - $ref: "#/components/schemas/Resolution"
+        - type: object
+          required: [yesCount, noCount, abstainCount, totalVotes, totalEligible, passed]
+          properties:
+            yesCount:
+              type: integer
+            noCount:
+              type: integer
+            abstainCount:
+              type: integer
+            totalVotes:
+              type: integer
+            totalEligible:
+              type: integer
+            passed:
+              type: ["boolean", "null"]
+            userVote:
+              type: ["string", "null"]
+
+    ResolutionInput:
+      type: object
+      required: [title, description, proposedAction, votingType, eligibleVoters]
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        proposedAction:
+          type: string
+        relatedIssueId:
+          type: integer
+        votingType:
+          type: string
+          enum: [informal, official, petition]
+        eligibleVoters:
+          type: string
+          enum: [owners_only, tenants_only, all_residents, one_per_unit]
+        oneVotePerUnit:
+          type: boolean
+        passPercentage:
+          type: integer
+        votingEndAt:
+          type: string
+
+    ResolutionVoteInput:
+      type: object
+      required: [vote]
+      properties:
+        vote:
+          type: string
+          enum: [yes, no, abstain]
+        comment:
+          type: string
+
+    ResolutionStatusUpdate:
+      type: object
+      required: [status]
+      properties:
+        status:
+          type: string
+          enum: [open, closed, passed, failed]
+
+    # ─── Announcements ────────────────────────────────────────────────────────
+
+    Announcement:
+      type: object
+      required: [id, buildingId, title, message, category, createdAt]
+      properties:
+        id:
+          type: integer
+        buildingId:
+          type: integer
+        title:
+          type: string
+        message:
+          type: string
+        category:
+          type: string
+          enum: [general, emergency, maintenance, meeting, financial, security]
+        priority:
+          type: ["string", "null"]
+        publishAt:
+          type: ["string", "null"]
+        expireAt:
+          type: ["string", "null"]
+        createdBy:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+
+    AnnouncementInput:
+      type: object
+      required: [title, message, category]
+      properties:
+        title:
+          type: string
+        message:
+          type: string
+        category:
+          type: string
+          enum: [general, emergency, maintenance, meeting, financial, security]
+        priority:
+          type: string
+        publishAt:
+          type: string
+        expireAt:
+          type: string
+
+    # ─── Notifications ────────────────────────────────────────────────────────
+
+    Notification:
+      type: object
+      required: [id, title, message, type, createdAt]
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        message:
+          type: string
+        type:
+          type: string
+        readAt:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+
+    # ─── Super Admin ──────────────────────────────────────────────────────────
+
+    PlatformStats:
+      type: object
+      required: [totalBuildings, activeBuildings, totalResidents, totalIssues, totalResolutions]
+      properties:
+        totalBuildings:
+          type: integer
+        activeBuildings:
+          type: integer
+        totalResidents:
+          type: integer
+        totalIssues:
+          type: integer
+        totalResolutions:
+          type: integer
+        buildingsByPlan:
+          type: array
+          items:
+            $ref: "#/components/schemas/CategoryCount"

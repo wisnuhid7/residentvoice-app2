@@ -1,0 +1,242 @@
+2026-06-12 02:03:58: 
+2026-06-12 02:03:58: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:03:58: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:03:58: 
+2026-06-12 02:03:59:   ➜  Local:   http://localhost:5173/
+2026-06-12 02:03:59:   ➜  Network: http://192.168.1.102:5173/
+2026-06-12 02:04:57:  ELIFECYCLE  Command failed.
+2026-06-12 02:05:06: 
+2026-06-12 02:05:06: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:05:06: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:05:06: 
+2026-06-12 02:05:06:   ➜  Local:   http://localhost:5173/
+2026-06-12 02:05:06:   ➜  Network: http://192.168.1.102:5173/
+2026-06-12 02:11:45:  ELIFECYCLE  Command failed.
+2026-06-12 02:11:45: 
+2026-06-12 02:11:45: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:11:45: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:11:45: 
+2026-06-12 02:11:46:   ➜  Local:   http://localhost:5173/
+2026-06-12 02:11:46:   ➜  Network: http://192.168.1.102:5173/
+2026-06-12 02:11:54:  ELIFECYCLE  Command failed.
+2026-06-12 02:11:55: 
+2026-06-12 02:11:55: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:11:55: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:11:55: 
+2026-06-12 02:11:56:   ➜  Local:   http://localhost:5173/
+2026-06-12 02:11:56:   ➜  Network: http://192.168.1.102:5173/
+2026-06-12 02:12:09:  ELIFECYCLE  Command failed.
+2026-06-12 02:12:18: 
+2026-06-12 02:12:18: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:12:18: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:12:18: 
+2026-06-12 02:12:19:   ➜  Local:   http://localhost:5173/
+2026-06-12 02:12:19:   ➜  Network: http://192.168.1.102:5173/
+2026-06-12 02:14:21:  ELIFECYCLE  Command failed.
+2026-06-12 02:23:39: 
+2026-06-12 02:23:39: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:23:39: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:23:39: 
+2026-06-12 02:23:40:   ➜  Local:   http://localhost:5173/
+2026-06-12 02:23:40:   ➜  Network: http://192.168.1.102:5173/
+2026-06-12 02:27:01:  ELIFECYCLE  Command failed.
+2026-06-12 02:27:20: 
+2026-06-12 02:27:20: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:27:20: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:27:20: 
+2026-06-12 02:27:20:   ➜  Local:   http://localhost:5173/
+2026-06-12 02:27:20:   ➜  Network: http://192.168.1.102:5173/
+2026-06-12 02:29:41:  ELIFECYCLE  Command failed.
+2026-06-12 02:32:02: 
+2026-06-12 02:32:02: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:32:02: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:32:02: 
+2026-06-12 02:32:03:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:32:08: 
+2026-06-12 02:32:08: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:32:08: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:32:08: 
+2026-06-12 02:32:09:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:32:13: 
+2026-06-12 02:32:13: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:32:13: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:32:13: 
+2026-06-12 02:32:14:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:32:19: 
+2026-06-12 02:32:19: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:32:19: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:32:19: 
+2026-06-12 02:32:19:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:32:41: 
+2026-06-12 02:32:41: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:32:41: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:32:41: 
+2026-06-12 02:32:42:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:32:47: 
+2026-06-12 02:32:47: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:32:47: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:32:47: 
+2026-06-12 02:32:47:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:32:52: 
+2026-06-12 02:32:52: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:32:52: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:32:52: 
+2026-06-12 02:32:53:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:32:58: 
+2026-06-12 02:32:58: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:32:58: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:32:58: 
+2026-06-12 02:32:58:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:33:03: 
+2026-06-12 02:33:03: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:33:03: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:33:03: 
+2026-06-12 02:33:03:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:33:08: 
+2026-06-12 02:33:08: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:33:08: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:33:08: 
+2026-06-12 02:33:09:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:33:14: 
+2026-06-12 02:33:14: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:33:14: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:33:14: 
+2026-06-12 02:33:14:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:33:19: 
+2026-06-12 02:33:19: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:33:19: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:33:19: 
+2026-06-12 02:33:20:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:33:24: 
+2026-06-12 02:33:24: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:33:24: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:33:24: 
+2026-06-12 02:33:25:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:33:30: 
+2026-06-12 02:33:30: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:33:30: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:33:30: 
+2026-06-12 02:33:30:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:33:36: 
+2026-06-12 02:33:36: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:33:36: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:33:36: 
+2026-06-12 02:33:36:   ➜  Local:   http://localhost:5173/
+2026-06-12 02:33:36:   ➜  Network: http://192.168.1.102:5173/
+2026-06-12 02:39:21:  ELIFECYCLE  Command failed.
+2026-06-12 02:39:54: 
+2026-06-12 02:39:54: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:39:54: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:39:54: 
+2026-06-12 02:39:54:   ➜  Local:   http://localhost:5173/
+2026-06-12 02:39:54:   ➜  Network: http://192.168.1.102:5173/
+2026-06-12 02:45:19:  ELIFECYCLE  Command failed.
+2026-06-12 02:45:20: 
+2026-06-12 02:45:20: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:45:20: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:45:20: 
+2026-06-12 02:45:21:   ➜  Local:   http://localhost:5173/
+2026-06-12 02:45:21:   ➜  Network: http://192.168.1.102:5173/
+2026-06-12 02:47:51:  ELIFECYCLE  Command failed.
+2026-06-12 02:47:52: 
+2026-06-12 02:47:52: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:47:52: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:47:52: 
+2026-06-12 02:47:53:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:47:58: 
+2026-06-12 02:47:58: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:47:58: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:47:58: 
+2026-06-12 02:47:58:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:48:03: 
+2026-06-12 02:48:03: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:48:03: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:48:03: 
+2026-06-12 02:48:04:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:48:09: 
+2026-06-12 02:48:09: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:48:09: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:48:09: 
+2026-06-12 02:48:09:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:48:14: 
+2026-06-12 02:48:14: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:48:14: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:48:14: 
+2026-06-12 02:48:15:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:48:20: 
+2026-06-12 02:48:20: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:48:20: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:48:20: 
+2026-06-12 02:48:20:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:48:25: 
+2026-06-12 02:48:25: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:48:25: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:48:25: 
+2026-06-12 02:48:26:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:48:31: 
+2026-06-12 02:48:31: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:48:31: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:48:31: 
+2026-06-12 02:48:31:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:48:36: 
+2026-06-12 02:48:36: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:48:36: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:48:36: 
+2026-06-12 02:48:37:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:48:41: 
+2026-06-12 02:48:41: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:48:41: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:48:41: 
+2026-06-12 02:48:42:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:48:47: 
+2026-06-12 02:48:47: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:48:47: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:48:47: 
+2026-06-12 02:48:47:  ELIFECYCLE  Command failed with exit code 1.
+2026-06-12 02:48:52: 
+2026-06-12 02:48:52: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:48:52: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:48:52: 
+2026-06-12 02:48:52:  ELIFECYCLE  Command failed.
+2026-06-12 02:48:56: 
+2026-06-12 02:48:56: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:48:56: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:48:56: 
+2026-06-12 02:48:57:   ➜  Local:   http://localhost:5173/
+2026-06-12 02:48:57:   ➜  Network: http://192.168.1.102:5173/
+2026-06-12 02:51:42:  ELIFECYCLE  Command failed.
+2026-06-12 02:52:58: 
+2026-06-12 02:52:58: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-12 02:52:58: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-12 02:52:58: 
+2026-06-12 02:52:59:   ➜  Local:   http://localhost:5173/
+2026-06-12 02:52:59:   ➜  Network: http://192.168.1.102:5173/
+2026-06-12 03:05:06:  ELIFECYCLE  Command failed.
+2026-06-13 01:10:33: 
+2026-06-13 01:10:33: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-13 01:10:33: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-13 01:10:33: 
+2026-06-13 01:10:34:   ➜  Local:   http://localhost:5173/
+2026-06-13 01:10:34:   ➜  Network: http://192.168.1.102:5173/
+2026-06-13 01:11:57:  ELIFECYCLE  Command failed.
+2026-06-13 01:12:03: 
+2026-06-13 01:12:03: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-13 01:12:03: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-13 01:12:03: 
+2026-06-13 01:12:03:   ➜  Local:   http://localhost:5173/
+2026-06-13 01:12:03:   ➜  Network: http://192.168.1.102:5173/
+2026-06-13 01:15:28:  ELIFECYCLE  Command failed with exit code 143.
+2026-06-13 18:02:31: 
+2026-06-13 18:02:31: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-13 18:02:31: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-13 18:02:31: 
+2026-06-13 18:02:31:   ➜  Local:   http://localhost:5173/
+2026-06-13 18:02:31:   ➜  Network: http://192.168.1.100:5173/
+2026-06-13 18:07:12:  ELIFECYCLE  Command failed.
+2026-06-13 18:10:21: 
+2026-06-13 18:10:21: > @workspace/resident-voice@0.0.0 serve /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice
+2026-06-13 18:10:21: > vite preview --config vite.config.ts --host 0.0.0.0
+2026-06-13 18:10:21: 
+2026-06-13 18:10:22:   ➜  Local:   http://localhost:5173/
+2026-06-13 18:10:22:   ➜  Network: http://192.168.1.100:5173/
+2026-06-13 18:19:03:  ELIFECYCLE  Command failed.

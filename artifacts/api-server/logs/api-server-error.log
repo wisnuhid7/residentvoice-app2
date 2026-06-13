@@ -1,0 +1,4 @@
+2026-06-12 02:03:58: Error: DATABASE_URL must be set. Did you forget to provision a database?
+2026-06-12 02:03:58:     at <anonymous> (/Users/wisnuflash/Downloads/residentvoice-app/lib/db/src/index.ts:8:9)
+2026-06-12 02:03:58:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:03:58:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)

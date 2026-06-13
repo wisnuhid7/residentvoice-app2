@@ -1,0 +1,352 @@
+2026-06-12 02:03:59: (node:21677) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:03:59: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:05:06: (node:22201) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:05:06: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:11:46: (node:23176) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:11:46: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:11:56: (node:23340) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:11:56: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:12:19: (node:23617) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:12:19: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:23:40: (node:25535) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:23:40: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:23:44: 2:23:44 AM [vite] http proxy error: /api/auth/me
+2026-06-12 02:23:44: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:23:44:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:23:44:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:24:17: 2:24:17 AM [vite] http proxy error: /api/auth/login
+2026-06-12 02:24:17: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:24:17:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:24:17:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:27:20: (node:26143) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:27:20: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:32:03: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:32:03: error when starting preview server:
+2026-06-12 02:32:03: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:32:03:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206323352-bd183a24e001d.mjs:20:9
+2026-06-12 02:32:03:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:32:03:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:32:03:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:32:03:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:32:03:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:32:03:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:32:03:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:32:03:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:32:09: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:32:09: error when starting preview server:
+2026-06-12 02:32:09: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:32:09:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206328827-e4b54d22d25bf.mjs:20:9
+2026-06-12 02:32:09:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:32:09:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:32:09:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:32:09:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:32:09:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:32:09:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:32:09:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:32:09:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:32:14: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:32:14: error when starting preview server:
+2026-06-12 02:32:14: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:32:14:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206334296-a40a96e70c726.mjs:20:9
+2026-06-12 02:32:14:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:32:14:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:32:14:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:32:14:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:32:14:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:32:14:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:32:14:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:32:14:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:32:19: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:32:19: error when starting preview server:
+2026-06-12 02:32:19: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:32:19:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206339658-d57bb8b4b03ae.mjs:20:9
+2026-06-12 02:32:19:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:32:19:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:32:19:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:32:19:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:32:19:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:32:19:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:32:19:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:32:19:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:32:42: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:32:42: error when starting preview server:
+2026-06-12 02:32:42: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:32:42:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206362194-bb1bcc957c5f3.mjs:20:9
+2026-06-12 02:32:42:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:32:42:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:32:42:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:32:42:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:32:42:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:32:42:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:32:42:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:32:42:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:32:47: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:32:47: error when starting preview server:
+2026-06-12 02:32:47: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:32:47:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206367571-e3b51d9a82865.mjs:20:9
+2026-06-12 02:32:47:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:32:47:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:32:47:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:32:47:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:32:47:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:32:47:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:32:47:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:32:47:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:32:53: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:32:53: error when starting preview server:
+2026-06-12 02:32:53: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:32:53:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206372974-5b518a46d0b3f.mjs:20:9
+2026-06-12 02:32:53:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:32:53:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:32:53:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:32:53:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:32:53:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:32:53:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:32:53:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:32:53:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:32:58: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:32:58: error when starting preview server:
+2026-06-12 02:32:58: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:32:58:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206378366-7c0ee9ac50c13.mjs:20:9
+2026-06-12 02:32:58:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:32:58:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:32:58:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:32:58:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:32:58:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:32:58:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:32:58:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:32:58:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:33:03: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:33:03: error when starting preview server:
+2026-06-12 02:33:03: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:33:03:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206383707-fbdcfec3e48a8.mjs:20:9
+2026-06-12 02:33:03:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:33:03:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:33:03:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:33:03:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:33:03:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:33:03:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:33:03:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:33:03:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:33:09: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:33:09: error when starting preview server:
+2026-06-12 02:33:09: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:33:09:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206389081-da3b58b104353.mjs:20:9
+2026-06-12 02:33:09:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:33:09:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:33:09:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:33:09:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:33:09:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:33:09:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:33:09:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:33:09:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:33:14: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:33:14: error when starting preview server:
+2026-06-12 02:33:14: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:33:14:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206394434-0d41765af284f.mjs:20:9
+2026-06-12 02:33:14:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:33:14:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:33:14:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:33:14:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:33:14:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:33:14:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:33:14:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:33:14:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:33:20: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:33:20: error when starting preview server:
+2026-06-12 02:33:20: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:33:20:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206399804-2a742875c3c35.mjs:20:9
+2026-06-12 02:33:20:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:33:20:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:33:20:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:33:20:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:33:20:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:33:20:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:33:20:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:33:20:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:33:25: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:33:25: error when starting preview server:
+2026-06-12 02:33:25: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:33:25:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206405154-fc95736e6c688.mjs:20:9
+2026-06-12 02:33:25:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:33:25:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:33:25:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:33:25:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:33:25:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:33:25:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:33:25:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:33:25:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:33:30: failed to load config from /Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/vite.config.ts
+2026-06-12 02:33:30: error when starting preview server:
+2026-06-12 02:33:30: Error: BASE_PATH environment variable is required but was not provided.
+2026-06-12 02:33:30:     at file:///Users/wisnuflash/Downloads/residentvoice-app/artifacts/resident-voice/node_modules/.vite-temp/vite.config.ts.timestamp-1781206410519-3237e46ba529e.mjs:20:9
+2026-06-12 02:33:30:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+2026-06-12 02:33:30:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+2026-06-12 02:33:30:     at async loadConfigFromBundledFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35996:12)
+2026-06-12 02:33:30:     at async bundleAndLoadConfigFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35884:17)
+2026-06-12 02:33:30:     at async loadConfigFromFile (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35851:42)
+2026-06-12 02:33:30:     at async resolveConfig (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35500:22)
+2026-06-12 02:33:30:     at async preview (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:35151:19)
+2026-06-12 02:33:30:     at async CAC.<anonymous> (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/cli.js:669:18)
+2026-06-12 02:33:36: (node:27722) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:33:36: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:37:28: 2:37:28 AM [vite] http proxy error: /api/auth/me
+2026-06-12 02:37:28: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:37:28:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:37:28:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:37:32: 2:37:32 AM [vite] http proxy error: /api/auth/login
+2026-06-12 02:37:32: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:37:32:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:37:32:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:37:33: 2:37:33 AM [vite] http proxy error: /api/auth/login
+2026-06-12 02:37:33: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:37:33:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:37:33:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:37:33: 2:37:33 AM [vite] http proxy error: /api/auth/login
+2026-06-12 02:37:33: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:37:33:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:37:33:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:37:34: 2:37:34 AM [vite] http proxy error: /api/auth/me
+2026-06-12 02:37:34: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:37:34:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:37:34:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:37:36: 2:37:36 AM [vite] http proxy error: /api/auth/me
+2026-06-12 02:37:36: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:37:36:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:37:36:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:37:37: 2:37:37 AM [vite] http proxy error: /api/auth/me
+2026-06-12 02:37:37: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:37:37:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:37:37:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:37:37: 2:37:37 AM [vite] http proxy error: /api/auth/me
+2026-06-12 02:37:37: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:37:37:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:37:37:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:37:37: 2:37:37 AM [vite] http proxy error: /api/auth/me
+2026-06-12 02:37:37: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:37:37:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:37:37:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:37:38: 2:37:38 AM [vite] http proxy error: /api/auth/me
+2026-06-12 02:37:38: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:37:38:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:37:38:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:37:38: 2:37:38 AM [vite] http proxy error: /api/auth/me
+2026-06-12 02:37:38: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:37:38:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:37:38:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:38:19: 2:38:19 AM [vite] http proxy error: /api/auth/me
+2026-06-12 02:38:19: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:38:19:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:38:19:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:38:23: 2:38:23 AM [vite] http proxy error: /api/auth/login
+2026-06-12 02:38:23: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:38:23:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:38:23:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:38:24: 2:38:24 AM [vite] http proxy error: /api/auth/login
+2026-06-12 02:38:24: AggregateError [ECONNREFUSED]: 
+2026-06-12 02:38:24:     at internalConnectMultiple (node:net:1122:18)
+2026-06-12 02:38:24:     at afterConnectMultiple (node:net:1689:7)
+2026-06-12 02:39:54: (node:28805) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:39:54: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:45:21: (node:29250) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:45:21: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:47:53: (node:29682) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:47:53: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:47:53: error when starting preview server:
+2026-06-12 02:47:53: Error: Port 5173 is already in use
+2026-06-12 02:47:53:     at Server.onError$1 (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:15006:28)
+2026-06-12 02:47:53:     at Server.emit (node:events:524:28)
+2026-06-12 02:47:53:     at emitErrorNT (node:net:1944:8)
+2026-06-12 02:47:53:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2026-06-12 02:47:58: (node:29737) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:47:58: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:47:58: error when starting preview server:
+2026-06-12 02:47:58: Error: Port 5173 is already in use
+2026-06-12 02:47:58:     at Server.onError$1 (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:15006:28)
+2026-06-12 02:47:58:     at Server.emit (node:events:524:28)
+2026-06-12 02:47:58:     at emitErrorNT (node:net:1944:8)
+2026-06-12 02:47:58:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2026-06-12 02:48:04: (node:29773) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:48:04: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:48:04: error when starting preview server:
+2026-06-12 02:48:04: Error: Port 5173 is already in use
+2026-06-12 02:48:04:     at Server.onError$1 (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:15006:28)
+2026-06-12 02:48:04:     at Server.emit (node:events:524:28)
+2026-06-12 02:48:04:     at emitErrorNT (node:net:1944:8)
+2026-06-12 02:48:04:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2026-06-12 02:48:09: (node:29806) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:48:09: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:48:09: error when starting preview server:
+2026-06-12 02:48:09: Error: Port 5173 is already in use
+2026-06-12 02:48:09:     at Server.onError$1 (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:15006:28)
+2026-06-12 02:48:09:     at Server.emit (node:events:524:28)
+2026-06-12 02:48:09:     at emitErrorNT (node:net:1944:8)
+2026-06-12 02:48:09:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2026-06-12 02:48:15: (node:29838) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:48:15: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:48:15: error when starting preview server:
+2026-06-12 02:48:15: Error: Port 5173 is already in use
+2026-06-12 02:48:15:     at Server.onError$1 (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:15006:28)
+2026-06-12 02:48:15:     at Server.emit (node:events:524:28)
+2026-06-12 02:48:15:     at emitErrorNT (node:net:1944:8)
+2026-06-12 02:48:15:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2026-06-12 02:48:20: (node:29871) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:48:20: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:48:20: error when starting preview server:
+2026-06-12 02:48:20: Error: Port 5173 is already in use
+2026-06-12 02:48:20:     at Server.onError$1 (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:15006:28)
+2026-06-12 02:48:20:     at Server.emit (node:events:524:28)
+2026-06-12 02:48:20:     at emitErrorNT (node:net:1944:8)
+2026-06-12 02:48:20:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2026-06-12 02:48:26: (node:29903) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:48:26: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:48:26: error when starting preview server:
+2026-06-12 02:48:26: Error: Port 5173 is already in use
+2026-06-12 02:48:26:     at Server.onError$1 (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:15006:28)
+2026-06-12 02:48:26:     at Server.emit (node:events:524:28)
+2026-06-12 02:48:26:     at emitErrorNT (node:net:1944:8)
+2026-06-12 02:48:26:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2026-06-12 02:48:31: (node:29947) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:48:31: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:48:31: error when starting preview server:
+2026-06-12 02:48:31: Error: Port 5173 is already in use
+2026-06-12 02:48:31:     at Server.onError$1 (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:15006:28)
+2026-06-12 02:48:31:     at Server.emit (node:events:524:28)
+2026-06-12 02:48:31:     at emitErrorNT (node:net:1944:8)
+2026-06-12 02:48:31:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2026-06-12 02:48:37: (node:29979) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:48:37: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:48:37: error when starting preview server:
+2026-06-12 02:48:37: Error: Port 5173 is already in use
+2026-06-12 02:48:37:     at Server.onError$1 (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:15006:28)
+2026-06-12 02:48:37:     at Server.emit (node:events:524:28)
+2026-06-12 02:48:37:     at emitErrorNT (node:net:1944:8)
+2026-06-12 02:48:37:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2026-06-12 02:48:42: (node:30012) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:48:42: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:48:42: error when starting preview server:
+2026-06-12 02:48:42: Error: Port 5173 is already in use
+2026-06-12 02:48:42:     at Server.onError$1 (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:15006:28)
+2026-06-12 02:48:42:     at Server.emit (node:events:524:28)
+2026-06-12 02:48:42:     at emitErrorNT (node:net:1944:8)
+2026-06-12 02:48:42:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2026-06-12 02:48:47: (node:30044) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:48:47: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:48:47: error when starting preview server:
+2026-06-12 02:48:47: Error: Port 5173 is already in use
+2026-06-12 02:48:47:     at Server.onError$1 (file:///Users/wisnuflash/Downloads/residentvoice-app/node_modules/.pnpm/vite@7.3.5_@types+node@25.9.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:15006:28)
+2026-06-12 02:48:47:     at Server.emit (node:events:524:28)
+2026-06-12 02:48:47:     at emitErrorNT (node:net:1944:8)
+2026-06-12 02:48:47:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2026-06-12 02:48:57: (node:30326) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:48:57: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-12 02:52:59: (node:30805) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-12 02:52:59: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-13 01:10:34: (node:3694) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-13 01:10:34: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-13 01:12:03: (node:3866) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-13 01:12:03: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-13 18:02:31: (node:5350) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-13 18:02:31: (Use `node --trace-warnings ...` to show where the warning was created)
+2026-06-13 18:10:22: (node:6156) ExperimentalWarning: WASI is an experimental feature and might change at any time
+2026-06-13 18:10:22: (Use `node --trace-warnings ...` to show where the warning was created)

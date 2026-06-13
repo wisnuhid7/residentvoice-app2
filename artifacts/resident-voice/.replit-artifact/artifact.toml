@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "ResidentVoice Portal"
+version = "1.0.0"
+id = "artifacts/resident-voice"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24316
+
+[services.development]
+run = "pnpm --filter @workspace/resident-voice run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/resident-voice", "run", "build" ]
+publicDir = "artifacts/resident-voice/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24316"
+BASE_PATH = "/"
