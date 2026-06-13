@@ -1,26 +1,20 @@
 services:
   api:
-    build:
-      context: .
-      dockerfile: Dockerfile.api
-    ports:
-      - "5001:5001"
+    image: ghcr.io/wisnuhid7/residetvoice:api-1.0
     environment:
       NODE_ENV: production
       PORT: "5001"
       DATABASE_URL: postgresql://postgres:postgres123@db:5432/res_db
       SESSION_SECRET: change-this-secret-in-production
-    depends_on:
-      db:
-        condition: service_healthy
+    # depends_on:
+    #   db:
+    #     condition: service_healthy
     restart: unless-stopped
 
   frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile.front
+    image: ghcr.io/wisnuhid7/residetvoice:front-1.0
     ports:
-      - "80:80"
+      - "8092:80"
     depends_on:
       - api
     restart: unless-stopped
