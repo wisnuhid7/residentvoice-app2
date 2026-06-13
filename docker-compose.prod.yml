@@ -4,7 +4,7 @@ services:
     environment:
       NODE_ENV: production
       PORT: "5001"
-      DATABASE_URL: postgresql://postgres:postgres123@all-db:5432/residence_db
+      DATABASE_URL: postgresql://postgres:postgres123@192.168.101.102:5532/residence_db
       SESSION_SECRET: change-this-secret-in-production
     # depends_on:
     #   db:
